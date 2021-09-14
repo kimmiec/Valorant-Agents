@@ -1,4 +1,4 @@
-# Valorant Agents
+# Agents of Valorant
 
 A web application that provides details on the agents of the game as well as their abilities. 
 
