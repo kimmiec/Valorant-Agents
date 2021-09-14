@@ -4,10 +4,10 @@ A web application that provides details on the agents of the game as well as the
 
 ## Technologies Used:
 
-HTML
-CSS3
-JavaScript
-jQuery
+- HTML
+- CSS3
+- JavaScript
+- jQuery
 
 ## Screenshots:
 ### Wireframe
