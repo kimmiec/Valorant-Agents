@@ -1,43 +1,4 @@
 // connect api
-
-// const $mainContent = $('main')
-
-// const $displayName = $('#agent-order');
-
-// const $agentList = (list) => {
-
-//     $.ajax({
-//         url: 'https://valorant-api.com/v1/agents'
-//     }).then(
-//         (data) => {
-// console.log(data);
-// const $agents = $('#agents-order')
-// $agents.addClass('agents')
-// $mainContent.append($agents)
-
-// list.displayName.forEach((names) => {
-
-// const $li = $('<li>')
-// $li.text(names)
-// $agents.append($li)
-
-// console.log($agentList)
-// $.Each(data.displayName); {
-//     $('#agent-order').append(`<li>${$agentList}</li>`);
-// }
-// console.log(data);   
-// })
-
-// $displayName.text(data.displayName);
-// console.log($displayName)
-// })
-
-// (error) => {
-//     console.log('Oops, something went wrong:', error);
-// }
-// }
-
-// }
 const $agentsName = $('#agents-name')
 //connect api
 function getAgents() {
@@ -115,10 +76,16 @@ function getAbilities () {
         url: 'https://valorant-api.com/v1/agents'
     }).then(
         (info) => {
-            abilityData = info.data
-            console.log
+            abilityData = info.data[0].abilities;
+            // console.log(abilityData);
+        // create loop to grab abilities
+            abilityData.forEach(ability => {
+                const $div = $('<div>')
+                $div.html(ability.displayName)
+                console.log($div)
+            })
         }
     )
 }
 
-
+getAbilities()
