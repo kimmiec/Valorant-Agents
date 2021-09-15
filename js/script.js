@@ -61,20 +61,24 @@ function getAgents() {
                     // create a list for agent names
                     const $li = $('<li>')
                     // display agent names
-                $li.html(agent.displayName)
-                // grab specific agent ids
-                $li.attr('id', agent.uuid) 
-                // add it to the list
-                agentList.append($li)
-                //add the agent names to the dictionary
-                agentDictionary[agent.displayName] = '1';
-                // grab the agents description
-                // display description next to agents name
-                // click on the agent names and have it grab their specific info
-                $li.on('click',() => (specificAgent(agent.uuid)))
+                    $li.html(`${agent.displayName}`)
+                    // grab specific agent ids
+                    $li.attr('id', agent.uuid) 
+                    // add it to the list
+                    agentList.append($li)
+                    //add the agent names to the dictionary
+                    agentDictionary[agent.displayName] = '1';
+                    
+                    // click on the agent names and have it grab their specific info
+                    $li.on('click',() => (specificAgent(agent.uuid)))
+                    
+                    // grab the agents description
+                    const $div = $('<div>')
+                    $div.html(`${agent.description}`)
+                    // display description 
+                    agentList.append($div)
 
                 }
-            
                 // console.log(agent.displayName)
             });
         }
@@ -118,11 +122,3 @@ function getAbilities () {
 }
 
 
-// console.log(info)
-
-// $.Each(info.data[0].displayName, function () {
-//     console.log(info.data[0].displayName);
-// });
-
-// $agentsName.on('click', getInfo);
-// console.log(getInfo)

@@ -3,15 +3,20 @@ header {
 }
 
 li {
-    color: blue;
+    color: lightskyblue;
     text-decoration: underline;
     cursor: pointer;
 }
 
 li:hover {
-    color: peachpuff;
+    color:palevioletred;
 }
 
 ol {
     list-style-type: none;
 }
+
+/* div {
+    display: flex;
+    text-align: left;
+} */
