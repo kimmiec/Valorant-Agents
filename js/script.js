@@ -22,7 +22,7 @@ function getAgents() {
                     // create a list for agent names
                     const $li = $('<li>')
                     // display agent names
-                    $li.html(`${agent.displayName}`)
+                    $li.html(agent.displayName)
                     // grab specific agent ids
                     $li.attr('id', agent.uuid) 
                     // add it to the list
@@ -33,11 +33,28 @@ function getAgents() {
                     // click on the agent names and have it grab their specific info
                     $li.on('click',() => (specificAgent(agent.uuid)))
                     
-                    // grab the agents description
+// ======================== grab the agents description =================
                     const $div = $('<div>')
                     $div.html(`${agent.description}`)
                     // display description 
                     agentList.append($div)
+        
+// ===================== grab agent abilities/description ==========================
+                    agentData.forEach((agentAbility) => {
+                        if(agentAbility && agentAbility.abilities) {
+                            agentAbility.abilities.forEach((ability) => { 
+                                if(agentAbility.slot !== 'passive') {
+                                console.log(ability.slot)
+                                // ^would it be better to have all the slot names appear? or just the passive?
+                                console.log(ability.displayName)
+                                console.log(ability.description)
+                                }
+                            })
+                        }
+                        // ability.data.abilities[0].displayName
+                        // console.log('hi')
+                    })
+
 
                 }
                 // console.log(agent.displayName)
@@ -69,23 +86,37 @@ function specificAgent(id) {
 
 getAgents()
 
+
 // grab abilities from the object
+// function getAbilities () {
+//     $.ajax({
+//         url: 'https://valorant-api.com/v1/agents'
+//     }).then(
+//         (info) => {
+//             abilityData = info.data.abilities;
+//             // ability = info.data[0].abilities; 
+//             // ^ this shows ONLY breachs' abilities
+//             // console.log(abilityData);
 
-function getAbilities () {
-    $.ajax({
-        url: 'https://valorant-api.com/v1/agents'
-    }).then(
-        (info) => {
-            abilityData = info.data[0].abilities;
-            // console.log(abilityData);
-        // create loop to grab abilities
-            abilityData.forEach(ability => {
-                const $div = $('<div>')
-                $div.html(ability.displayName)
-                console.log($div)
-            })
-        }
-    )
-}
+//             const abilityList = $('.ability-list')
+//             // const abilityDictionary = {};
+//         // create loop to grab abilities
+//             abilityData.forEach((ability) => {
+//                 if ()
+//                 ability.forEach(valAbility => {
+                    
+//                 const $div = $('<div>')
+//                 $div.html(abilityData.displayName)
+//                 console.log(abilityData)
+//                 // display for now 
+//                 abilityList.append($div)
+//                 // only displays^ when using element value
+//                 console.log($div)
+//                 // ^works, shows all the agents' abilities but written in a weird way     
+//                 })
+//             })
+//         }
+//     )
+// }
 
-getAbilities()
+// getAbilities()
