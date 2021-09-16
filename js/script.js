@@ -29,13 +29,24 @@ function getAgents() {
                     agentList.append($li)
                     //add the agent names to the dictionary
                     agentDictionary[agent.displayName] = '1';
+
+                    //hover over names and the description appears
+                    $li.addClass('des')
                     
                     // click on the agent names and have it grab their specific info
                     $li.on('click',() => (specificAgent(agent.uuid)))
+                    $li.on('click', () => {
+                        $('.popup-overlay, .popup-content').addClass('active');
+                    })
+                    $('.close, .popup-overlay').on('click', () => {
+                        $('.popup-overlay, .popup-content').removeClass('active');
+                    })
                     
 // ======================== grab the agents description =================
                     const $div = $('<div>')
                     $div.html(`${agent.description}`)
+                    // hide description
+                    $div.addClass('hide')
                     // display description 
                     agentList.append($div)
         
@@ -45,22 +56,24 @@ function getAgents() {
                     agentData.forEach((agentAbility) => {
                         if(agentAbility && agentAbility.abilities) {
                             agentAbility.abilities.forEach((ability) => { 
-                                // if(!abilityDictionary[ability.displayName, ability.description, ability.slot])
+                                if(!agentDictionary[ability.displayName] && [ability.description] && [ability.slot])
 
-                                if(agentAbility.slot !== 'passive') {
+                                // if(agentAbility.slot !== 'passive') {
                                 console.log(ability.slot)
                                 // ^would it be better to have all the slot names appear? or just the passive?
                                 console.log(ability.displayName)
                                 console.log(ability.description)
-                                }
+                                // }
                                 // const $li = $('.ability-list')
                                 // $li.html(`${ability.slot} ${ability.displayName} ${ability.description}`)
                                 // agentList.append($li)
-                                // abilityDictionary[ability.displayName, ability.description, ability.slot] = '2'
+                                //remove second sova
+                                agentDictionary[[ability.displayName] && [ability.description] && [ability.slot]] = '0'
+
+                                
                             })
                         }
-                        // ability.data.abilities[0].displayName
-                        // console.log('hi')
+                    
                     })
 
 
@@ -77,13 +90,16 @@ function getAgents() {
     
 }
 
-
+// const agentInfo = $('.agent-info')
 // create function to grab one specific agent and their info
 function specificAgent(id) {
     $.ajax({
         url: `https://valorant-api.com/v1/agents/${id}`
     }).then(
         (info) => {
+            // const $p = $('.agent-info')
+            // $p.html(agentData)
+            // agentInfo.append($p)
             console.log(info);
         }
 
@@ -91,6 +107,14 @@ function specificAgent(id) {
 
 }
 
+// ================== modal pop up =======================
+// $('.open').on('click', () => {
+//     $('.popup-overlay, .popup-content').addClass('active');
+// })
+
+// $('.close, .popup-overlay').on('click', () => {
+//     $('.popup-overlay,, .popup-content').removeClass('active');
+// })
 
 getAgents()
 

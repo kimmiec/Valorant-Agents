@@ -16,11 +16,37 @@ li:hover {
     color:palevioletred;
 }
 
+.des:hover + .hide{
+    display: flex;
+}
+
 ol {
     list-style-type: none;
 }
 
-/* div {
-    display: flex;
-    text-align: left;
-} */
+.hide {
+    display: none;
+}
+
+.popup-overlay {
+    visibility: hidden;
+}
+
+.popup-content {
+    visibility: hidden;
+}
+
+.popup-overlay.active {
+    visibility: visible;
+    /* background-color: powderblue;
+    position: fixed;
+    display: none; */
+}
+
+.popup-content.active {
+    visibility: visible;
+    /* background-color: powderblue;
+    position: fixed;
+    display: none; */
+
+}
