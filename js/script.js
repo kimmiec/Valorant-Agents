@@ -40,15 +40,23 @@ function getAgents() {
                     agentList.append($div)
         
 // ===================== grab agent abilities/description ==========================
+                    // const abilityList = $('.agent-ability');
+                    // const abilityDictionary = {};
                     agentData.forEach((agentAbility) => {
                         if(agentAbility && agentAbility.abilities) {
                             agentAbility.abilities.forEach((ability) => { 
+                                // if(!abilityDictionary[ability.displayName, ability.description, ability.slot])
+
                                 if(agentAbility.slot !== 'passive') {
                                 console.log(ability.slot)
                                 // ^would it be better to have all the slot names appear? or just the passive?
                                 console.log(ability.displayName)
                                 console.log(ability.description)
                                 }
+                                // const $li = $('.ability-list')
+                                // $li.html(`${ability.slot} ${ability.displayName} ${ability.description}`)
+                                // agentList.append($li)
+                                // abilityDictionary[ability.displayName, ability.description, ability.slot] = '2'
                             })
                         }
                         // ability.data.abilities[0].displayName
