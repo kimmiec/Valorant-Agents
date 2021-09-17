@@ -6,47 +6,96 @@ header {
 
 } */
 
-li {
+/* agent names - first ordered list */
+.names {
     color: lightskyblue;
     text-decoration: underline;
     cursor: pointer;
 }
 
-li:hover {
+.names:hover {
     color:palevioletred;
 }
 
-.des:hover + .hide{
-    display: flex;
-}
-
-ol {
+li {
     list-style-type: none;
 }
 
-.hide {
+/* ability list - second ordered list */
+.ability-1, .ability-2, .grenade, .ultimate, .passive {
+    color: thistle;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ability-1:hover, .ability-2:hover, .grenade:hover, .ultimate:hover, .passive:hover{
+    color: lightsteelblue;
+}
+
+.container {
+    display: flex;
+    gap: 10%;
+}
+
+#agents {
+    width: 10%;
+}
+
+#display {
+    width: 70%;
+    text-align: center;
+    border: 3px solid thistle;
+}
+
+/* .modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgb(176, 224, 230,0.5);
+} */
+
+.modal-content {
+    background-color: #76e9d9;
+    margin: 20% auto;
+    /* ^^20% - how far in the window we want it to go from top to bottom and the auto - for left and right bc we want it to stay center */
+    padding: 20% auto;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(250, 68, 84, 0.47), 0px 7px 20px 0 rgba(220, 61, 75, 0.17);
+    /* animation */
+    animation: openModal;
+    animation-duration: 1.5s;
+}
+
+/* .closeBtn {
+    color: ;
+} */
+/* @media screen and  */
+
+
+
+/* .modal {
+    visibility: hidden;
+}
+
+.modal-content {
+    visibility: hidden;
+}
+
+.modal.active {
+    visibility: visible;
+    background-color: powderblue;
+    position: fixed;
     display: none;
 }
 
-.popup-overlay {
-    visibility: hidden;
-}
-
-.popup-content {
-    visibility: hidden;
-}
-
-.popup-overlay.active {
-    visibility: visible;
-    /* background-color: powderblue;
-    position: fixed;
-    display: none; */
-}
-
-.popup-content.active {
+.modal-content.active {
     visibility: visible;
     /* background-color: powderblue;
     position: fixed;
     display: none; */
 
-}

@@ -1,46 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>Agents of Valorant</title>
 </head>
+
 <body>
-    
+
     <header>
         <h1 id='open'>Agents of Valorant</h1>
     </header>
 
     <main>
-        <ol id="agent-order">
-            <!-- <li id="agents-name"></li> -->
-        </ol>
-        <div class="agent-ability">
-        <ul class="ability-list"></ul>
-        </div>
+        <div class="container">
+            <div id="agents">
+                <ol id="agent-order">
+                    <!-- <li id="agents-name"></li> -->
+                </ol>
+            </div>
+            <div id="display">
+                <!-- <div class="agent-ability">
+                    <ul class="ability-list"></ul>
+                </div> -->
+                <h3 class="agent-name"></h3>
+                <p class="agent-info"></p>
 
-        <p class="agent-info"></p>
-<!-- ================= modal pop up ==================== -->
-        <div class="popup-overlay">
-            
-            <div class="popup-content">
-               <!-- <h2>pop-up</h2>
-               <p>example of pop-up</p> -->
-               
-               <button class="close">Close</button>
-               
+                <h4 class="role"></h4>
+                <p class="desc"></p>
+
+                <h4 class="abilities"></h4>
+                <div id="smallModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="closeBtn">&times;</span>
+                            <div class="modal-body">
+                                <ol id="abilities-list">
+                                    <li class="ability-1"></li>
+                                    <p id="ability1"></p>
+                                    <li class="ability-2"></li>
+                                    <p id="ability2"></p>
+                                    <li class="grenade"></li>
+                                    <p id="grenade"></p>
+                                    <li class="ultimate"></li>
+                                    <p id="ult"></p>
+                                    <li class="passive"></li>
+                                    <p id="pass"></p>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+        <!-- page pop up -->
+
+        <!-- ================= modal pop up ==================== -->
+        <!-- <div class="modal">
+            
+            <div class="modal-content">
+                <div id="text"></div>
+                <p id="modal-desc"></p>
+                <div class="modal-images"></div>
+               <button class="close">X</button>
+               
+            </div>
+        </div> -->
 
         <!-- <h2>pop-up example</h2>
         <button class="open">Open</button> -->
 
     </main>
 
-<!-- javascript -->
+    <!-- javascript -->
     <script src="./js/script.js"></script>
 </body>
+
 </html>
