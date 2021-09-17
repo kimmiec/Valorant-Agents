@@ -126,20 +126,51 @@ getAgents()
 // get modal element
 let modal = $('#smallModal');
 // get open modal button
-let abilityBtn = $('#abilities-list');
+let abilityBtn = $('#abilityBtn');
 // get close button
 let closeBtn = $('.closeBtn');
 
 // listen for open click
-abilityBtn.on('click', (openModal) => {
-    modal.style.display = 'block';
+// abilityBtn.on('click', (openModal) => {
+//     // modal.style.display = 'block'
+//     console.log('hi')
+// });
+
+// another attempt at open click
+abilityBtn.on('click', () => {
+    $('.modal, .modal-content').addClass('active');
     console.log('hi')
 });
+
+
+// open click another way
+// const smallModal = $('#smallModal');
+// $('.ability-1').click(function(e) {
+//     // console.log('hi')
+//     smallModal.dialog('open');
+//     e.preventDefault();
+//     return false;
+// });
+
+// $('#smallModal').dialog({
+//     autoOpen: false,
+//     modal: true,
+//     resizeable: false,
+//     draggable: false,
+
+// });
+
+// close click
+closeBtn.on('click', () => {
+    $('.modal, .modal-content').removeClass('active');
+    console.log('hi')
+});
+
 // listen for close click
-closeBtn.on('click', (closeModal) => {
-    // modal.style.display = 'none';
-    console.log('hi')
-});
+// closeBtn.on('click', (closeModal) => {
+//     modal.style.display = 'none';
+//     console.log('hi')
+// });
 
 // function to open modal
 // function openModal() {

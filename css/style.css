@@ -47,7 +47,7 @@ li {
     border: 3px solid thistle;
 }
 
-/* .modal {
+.modal {
     display: none;
     position: fixed;
     z-index: 2;
@@ -56,8 +56,8 @@ li {
     height: 100%;
     width: 100%;
     overflow: auto;
-    background-color: rgb(176, 224, 230,0.5);
-} */
+    background-color: rgb(176, 224, 230, 0.2);
+}
 
 .modal-content {
     background-color: #76e9d9;
@@ -71,31 +71,41 @@ li {
     animation-duration: 1.5s;
 }
 
-/* .closeBtn {
-    color: ;
+/* .modal-body {
+    display:contents;
 } */
+
+.closeBtn {
+    color: #406897;
+    float: right;
+    font-size: 30px;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+    cursor: pointer;
+}
 /* @media screen and  */
 
 
-
-/* .modal {
+/* 
+.modal {
     visibility: hidden;
 }
 
 .modal-content {
     visibility: hidden;
 }
-
+  */
 .modal.active {
-    visibility: visible;
+    display: block;
     background-color: powderblue;
     position: fixed;
-    display: none;
+    /* display: none; */
 }
 
 .modal-content.active {
-    visibility: visible;
-    /* background-color: powderblue;
+    visibility: block;
+    background-color: powderblue;
     position: fixed;
-    display: none; */
-
+    /* display: none; */
+}
