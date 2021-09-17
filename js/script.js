@@ -56,10 +56,12 @@ function getAgents() {
                         // const $modal = $('#modal-description')
                         // $modal.html(agent.abilities)
 
-
+                        
                         // insert abilities into modal pop
-
+                        
                     })
+                    
+
                 }
                 // console.log(agent.displayName)
             });
@@ -109,7 +111,23 @@ function specificAgent(id) {
                 // console.log(ability,i)
 
             })
-            
+            // display ability icons
+            const icon1 = $('#iconImg1')
+            const icon2 = $('#iconImg2')
+            const icon3 = $('#iconImg3')
+            const icon4 = $('#iconImg4')
+            const icon5 = $('#iconImg5')
+            // icon5.append(' ')
+            let iconArray = [icon1, icon2, icon3, icon4, icon5];
+
+            abilities.forEach((ability,p) => {
+                iconArray[p].attr('src', ability.displayIcon)
+                iconArray[p].attr('alt', ability.displayName)
+                iconArray[p].append(ability.displayIcon)
+                icon5.append(' ')
+            })
+
+
             // display ability description in modal
             const desc1 = $('#ability1')
             const desc2 = $('#ability2')
@@ -124,9 +142,13 @@ function specificAgent(id) {
                 descArray[d].text(ability.description)
             })
 
-
-
-
+            // display agent image
+            const agentImg = $('<img>')
+            agentImg.attr('src', info.data.fullPortrait)
+            agentImg.attr('alt', info.data.displayName)
+            const agentDisplay = $('#display')
+            agentDisplay.append(agentImg)
+            agentDisplay.append(' ')
             // console.log(info.data.displayName);
         }
 

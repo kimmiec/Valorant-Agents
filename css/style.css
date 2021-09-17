@@ -1,10 +1,20 @@
-header {
-    text-align: center;
+body, html {
+    height: 100%;
 }
 
-/* body {
+body {
+    background: url('https://cdn1.dotesports.com/wp-content/uploads/2021/09/01010216/Reflection-ACT-II-4k-Wide_4-1024x576.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
 
-} */
+header {
+    text-align: center;
+
+}
+
 
 /* agent names - first ordered list */
 .names {
@@ -19,6 +29,23 @@ header {
 
 li {
     list-style-type: none;
+}
+/* agent images */
+img {
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 50px;
+}
+
+/* ability images */
+#iconImg1, #iconImg2, #iconImg3, #iconImg4, #iconImg5 {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 0 0 100px 0;
+    display: inline;
 }
 
 /* description p tag */
@@ -54,9 +81,11 @@ li {
     border: 3px solid thistle;
 }
 
-
+.modal {
+    display: none;
+}
 .modal.active {
-    /* display: none; */
+    display: block;
     position: fixed;
     z-index: 2;
     left: 0;
