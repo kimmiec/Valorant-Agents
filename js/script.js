@@ -109,6 +109,21 @@ function specificAgent(id) {
                 // console.log(ability,i)
 
             })
+            
+            // display ability description in modal
+            const desc1 = $('#ability1')
+            const desc2 = $('#ability2')
+            const desc3 = $('#grenade')
+            const desc4 = $('#ult')
+            const desc5 = $('#pass')
+            desc5.text(' ')
+
+            let descArray = [desc1, desc2, desc3, desc4, desc5];
+
+            abilities.forEach((ability,d) => {
+                descArray[d].text(ability.description)
+            })
+
 
 
 
@@ -141,24 +156,6 @@ abilityBtn.on('click', () => {
     $('.modal, .modal-content').addClass('active');
     console.log('hi')
 });
-
-
-// open click another way
-// const smallModal = $('#smallModal');
-// $('.ability-1').click(function(e) {
-//     // console.log('hi')
-//     smallModal.dialog('open');
-//     e.preventDefault();
-//     return false;
-// });
-
-// $('#smallModal').dialog({
-//     autoOpen: false,
-//     modal: true,
-//     resizeable: false,
-//     draggable: false,
-
-// });
 
 // close click
 closeBtn.on('click', () => {

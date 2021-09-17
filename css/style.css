@@ -21,6 +21,13 @@ li {
     list-style-type: none;
 }
 
+/* description p tag */
+#ability1, #ability2, #grenade, #ult, #pass {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
 /* ability list - second ordered list */
 .ability-1, .ability-2, .grenade, .ultimate, .passive {
     color: thistle;
@@ -47,8 +54,9 @@ li {
     border: 3px solid thistle;
 }
 
-.modal {
-    display: none;
+
+.modal.active {
+    /* display: none; */
     position: fixed;
     z-index: 2;
     left: 0;
@@ -56,33 +64,43 @@ li {
     height: 100%;
     width: 100%;
     overflow: auto;
-    background-color: rgb(176, 224, 230, 0.2);
+    background-color: rgb(37, 150, 190, 0.2);
 }
 
-.modal-content {
-    background-color: #76e9d9;
+.modal-content.active {
+    background-color: rgba(61,142,180,255);
     margin: 20% auto;
     /* ^^20% - how far in the window we want it to go from top to bottom and the auto - for left and right bc we want it to stay center */
     padding: 20% auto;
     width: 70%;
+    height: 50%;
     box-shadow: 0 5px 8px 0 rgba(250, 68, 84, 0.47), 0px 7px 20px 0 rgba(220, 61, 75, 0.17);
     /* animation */
     animation: openModal;
     animation-duration: 1.5s;
 }
 
-/* .modal-body {
-    display:contents;
-} */
+.modal-body {
+    padding: 20px;
+    text-align: center;
+}
 
 .closeBtn {
-    color: #406897;
+    color: rgba(253,205,172,255);
     float: right;
-    font-size: 30px;
+    margin: 0 5px 0 0;
+    font-size: 20px;
 }
 
 .closeBtn:hover, .closeBtn:focus {
+    color: rgba(226,82,109,255);
+    text-decoration: none;
     cursor: pointer;
+}
+
+@keyframes openModal {
+    from{opacity: 0;}
+    to{opacity: 1;}
 }
 /* @media screen and  */
 
@@ -96,16 +114,17 @@ li {
     visibility: hidden;
 }
   */
-.modal.active {
+/* .modal.active {
     display: block;
     background-color: powderblue;
     position: fixed;
-    /* display: none; */
+    display: none;
 }
 
 .modal-content.active {
     visibility: block;
     background-color: powderblue;
     position: fixed;
-    /* display: none; */
+    display: none;
 }
+  */
