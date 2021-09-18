@@ -15,10 +15,11 @@ function getAgents() {
             const agentList = $('#agent-order')
             //create an empty object
             const agentDictionary = {};
+            console.log(agentData[16])
             //write a loop to grab all the agents name
-            agentData.forEach(agent => {
+            agentData.forEach((agent,a) => {
                 //if the agent isnt in the dictionary, add to list
-                if (!agentDictionary[agent.displayName]) {
+                if (a !== 5) {
                     // create a list for agent names
                     const $li = $('<li>')
                     // display agent names
@@ -36,7 +37,7 @@ function getAgents() {
 
                     // click on the agent names and have it grab their specific info
                     $li.on('click', () => (specificAgent(agent.uuid)))
-
+    
                     // ======================== grab the agents description =================
                     const $div = $('<div>')
                     $div.html(`${agent.description}`)
@@ -56,8 +57,6 @@ function getAgents() {
                         // const $modal = $('#modal-description')
                         // $modal.html(agent.abilities)
 
-                        
-                        // insert abilities into modal pop
                         
                     })
                     
@@ -117,14 +116,17 @@ function specificAgent(id) {
             const icon3 = $('#iconImg3')
             const icon4 = $('#iconImg4')
             const icon5 = $('#iconImg5')
-            // icon5.append(' ')
+            icon5.attr('src', ' ')
+            icon5.attr('alt', ' ')
+            icon5.addClass('hidden')
             let iconArray = [icon1, icon2, icon3, icon4, icon5];
-
+            
             abilities.forEach((ability,p) => {
                 iconArray[p].attr('src', ability.displayIcon)
                 iconArray[p].attr('alt', ability.displayName)
-                iconArray[p].append(ability.displayIcon)
-                icon5.append(' ')
+                // only remove class if there is an display icon otherwise leave it hidden
+                if(ability.displayIcon) iconArray[p].removeClass('hidden')
+                console.log(ability.displayIcon)
             })
 
 
@@ -143,13 +145,15 @@ function specificAgent(id) {
             })
 
             // display agent image
-            const agentImg = $('<img>')
+            const agentImg = $('#agentImg')
             agentImg.attr('src', info.data.fullPortrait)
             agentImg.attr('alt', info.data.displayName)
-            const agentDisplay = $('#display')
-            agentDisplay.append(agentImg)
-            agentDisplay.append(' ')
-            // console.log(info.data.displayName);
+            agentImg.removeClass('hidden')
+
+            // ability button
+            const abilityBtn = $('#abilityBtn')
+            abilityBtn.removeClass('hidden')
+        
         }
 
     )

@@ -1,5 +1,7 @@
 body, html {
-    height: 100%;
+    min-height: 100%;
+    cursor: crosshair;
+    margin: 0;
 }
 
 body {
@@ -20,7 +22,8 @@ header {
 .names {
     color: lightskyblue;
     text-decoration: underline;
-    cursor: pointer;
+    cursor: crosshair;
+    margin: 10px 0 10px 0;
 }
 
 .names:hover {
@@ -30,22 +33,28 @@ header {
 li {
     list-style-type: none;
 }
+
+.ability-info {
+    display: flex;
+}
+
 /* agent images */
 img {
     width: 300px;
     height: 300px;
     float: left;
     margin-right: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
+
 
 /* ability images */
 #iconImg1, #iconImg2, #iconImg3, #iconImg4, #iconImg5 {
+    /* display: inline; */
     width: 30px;
     height: 30px;
     float: left;
-    margin: 0 0 100px 0;
-    display: inline;
+    /* margin: 0 0 100px 0; */
 }
 
 /* description p tag */
@@ -59,7 +68,7 @@ img {
 .ability-1, .ability-2, .grenade, .ultimate, .passive {
     color: thistle;
     text-decoration: underline;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .ability-1:hover, .ability-2:hover, .grenade:hover, .ultimate:hover, .passive:hover{
@@ -78,21 +87,36 @@ img {
 #display {
     width: 70%;
     text-align: center;
-    border: 3px solid thistle;
+    /* border: 3px solid thistle; */
+}
+
+/* description button */
+.button {
+    background-color: rgb(228, 152, 154, 255);
+    position: absolute;
+    left: 49.5%;
+}
+
+
+.active {
+    display: block;
 }
 
 .modal {
     display: none;
+    max-height: 100vh;
+    /* overflow-y: scroll; */
 }
+
 .modal.active {
     display: block;
     position: fixed;
     z-index: 2;
     left: 0;
     top: 0;
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
-    overflow: auto;
+    /* overflow: auto; */
     background-color: rgb(37, 150, 190, 0.2);
 }
 
@@ -104,6 +128,7 @@ img {
     width: 70%;
     height: 50%;
     box-shadow: 0 5px 8px 0 rgba(250, 68, 84, 0.47), 0px 7px 20px 0 rgba(220, 61, 75, 0.17);
+    overflow-y: scroll;
     /* animation */
     animation: openModal;
     animation-duration: 1.5s;
@@ -130,6 +155,10 @@ img {
 @keyframes openModal {
     from{opacity: 0;}
     to{opacity: 1;}
+}
+
+.hidden {
+    display: none;
 }
 /* @media screen and  */
 
