@@ -261,14 +261,14 @@ h3, h4 {
 
     /* agent headers */
     h3, h4 {
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
-    padding: -10px;
+    padding: -20px;
     } 
 
     /* agent desc p tag */
     .agent-info, .desc {
-    font-size: 11px;
+    font-size: 13px;
     text-align: center;
     padding: -5px;
     }
@@ -276,15 +276,31 @@ h3, h4 {
     .button {
         width: 12.5%;
         height: 10%;
-        right: 30%;
-        margin: 0px 5px;
+        right: 26%;
+        margin: 0px 10px;
+    }
+    /* card panels */
+    .card-panel {
+        width: 80%;
+        height: 95%;
+        margin: 0px 20px;
+        padding-block-start: 2px;
+        padding-block-end: 10px;
     }
 
+    #active {
+        height: 90%;
+        width: 85%;
+        margin: 0px -20px 0px 10px;
+        padding-block-start: 1px;
+        padding-block-end: 5px;
+    }
 
     .modal-body {
         height: 250px;
         overflow-y: auto;
     }
+
 
 
 } 
