@@ -14,26 +14,28 @@ body {
 
 header {
     text-align: center;
+    margin-top: 100px;
 
 }
 
 
 /* agent names - first ordered list */
 .names {
-    color: lightskyblue;
+    color: rgba(204,70,89,255);
     text-decoration: underline;
     cursor: crosshair;
-    margin: 10px 0 10px 0;
+    margin: 5px 0px 5px -15px;
 }
 
 .names:hover {
-    color:palevioletred;
+    color: rgba(3,184,151,255);
 }
 
 li {
     list-style-type: none;
 }
 
+/* div class that surrounds the ability list/desc/icon images */
 .ability-info {
     display: flex;
 }
@@ -44,35 +46,48 @@ img {
     height: 300px;
     float: left;
     margin-right: 10px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 
 /* ability images */
 #iconImg1, #iconImg2, #iconImg3, #iconImg4, #iconImg5 {
     /* display: inline; */
-    width: 30px;
-    height: 30px;
-    float: left;
-    /* margin: 0 0 100px 0; */
+    width: 40px;
+    height: 40px;
+    /* float: left; */
+    margin: 10px 25px;
 }
 
 /* description p tag */
 #ability1, #ability2, #grenade, #ult, #pass {
     font-size: 15px;
-    margin: 0;
-    padding: 0;
+    margin: 5px 0;
+    text-align: center;
+    /* padding: 0; */
 }
 
 /* ability list - second ordered list */
 .ability-1, .ability-2, .grenade, .ultimate, .passive {
     color: thistle;
     text-decoration: underline;
-    /* cursor: pointer; */
+    margin: 0 20px 0 -30px;
+    text-align: left;
 }
 
 .ability-1:hover, .ability-2:hover, .grenade:hover, .ultimate:hover, .passive:hover{
     color: lightsteelblue;
+}
+/* agent headers */
+/* h3, h4 {
+    font-size: 40px;
+} */
+
+
+/* agent desc p tag */
+.agent-info, .desc {
+    font-size: 15px;
+    text-align: center;
 }
 
 .container {
@@ -85,38 +100,44 @@ img {
 }
 
 #display {
-    width: 70%;
+    width: 100%;
+    /* height: 150%; */
     text-align: center;
     /* border: 3px solid thistle; */
 }
 
-/* description button */
+/* abilities button */
 .button {
     background-color: rgb(228, 152, 154, 255);
     position: absolute;
-    left: 49.5%;
+    left: 64.1%;
+    margin: 10px 0 0 0;
+    cursor: crosshair;
 }
 
-
+/* modal pop up */
 .active {
     display: block;
+    background-color: rgba(252,227,203,255);
+    height: 70%;
 }
 
 .modal {
     display: none;
     max-height: 100vh;
-    /* overflow-y: scroll; */
+
 }
 
 .modal.active {
     display: block;
     position: fixed;
-    z-index: 2;
+    z-index: 5;
     left: 0;
     top: 0;
+    right: 250px;
     /* height: 100%; */
     width: 100%;
-    /* overflow: auto; */
+    /* overflow-y: initial; */
     background-color: rgb(37, 150, 190, 0.2);
 }
 
@@ -128,7 +149,7 @@ img {
     width: 70%;
     height: 50%;
     box-shadow: 0 5px 8px 0 rgba(250, 68, 84, 0.47), 0px 7px 20px 0 rgba(220, 61, 75, 0.17);
-    overflow-y: scroll;
+    overflow-y: initial;
     /* animation */
     animation: openModal;
     animation-duration: 1.5s;
@@ -137,6 +158,8 @@ img {
 .modal-body {
     padding: 20px;
     text-align: center;
+    height: 50vh;
+    overflow-y: auto;
 }
 
 .closeBtn {
@@ -149,7 +172,7 @@ img {
 .closeBtn:hover, .closeBtn:focus {
     color: rgba(226,82,109,255);
     text-decoration: none;
-    cursor: pointer;
+    cursor: crosshair;
 }
 
 @keyframes openModal {
@@ -160,29 +183,54 @@ img {
 .hidden {
     display: none;
 }
-/* @media screen and  */
+
+@media only screen and (max-width: 600px) {
+    body{
+        font-size: 15px;
+    }
+
+    header{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .card-panel{
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        width: 155px;
+        height: 155px;
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 60px;
+    }
+    /* ability name list */
+    .ability-1, .ability-2, .grenade, .ultimate, .passive {
+        font-size: 15px;
+        text-align: left, justify;
+        margin: 0 20px 0 -30px;
+    }
+    /* p tag desc */
+    #ability1, #ability2, #grenade, #ult, #pass {
+        font-size: 13.5px;
+        text-align: center;
+        margin: 5px 0 5px 0;
+    }
+
+    /* ability images */
+    #iconImg1, #iconImg2, #iconImg3, #iconImg4, #iconImg5 {
+    width: 32px;
+    height: 32px;
+    }
+
+    /* .modal-body {
+        font-size: 15px;
+        text-align: center;
+        margin: 10px 5px 10px 5px;
+    } */
 
 
-/* 
-.modal {
-    visibility: hidden;
-}
+} 
 
-.modal-content {
-    visibility: hidden;
-}
-  */
-/* .modal.active {
-    display: block;
-    background-color: powderblue;
-    position: fixed;
-    display: none;
-}
-
-.modal-content.active {
-    visibility: block;
-    background-color: powderblue;
-    position: fixed;
-    display: none;
-}
-  */
