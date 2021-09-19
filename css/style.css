@@ -15,7 +15,13 @@ body {
 header {
     text-align: center;
     margin-top: 100px;
+}
 
+h1 {
+    font-family: 'cinzel', serif;
+    font-size: 50px;
+    margin: 10px;
+    margin-left: 60px;
 }
 
 
@@ -24,8 +30,9 @@ header {
     color: rgba(204,70,89,255);
     text-decoration: underline;
     cursor: crosshair;
-    margin: 10px 0px 5px -15px;
+    margin: 10px 5px 5px -15px;
     padding-top: 5px;
+    font-family: 'cinzel', serif;
 }
 
 .names:hover {
@@ -65,7 +72,7 @@ img {
     font-size: 15px;
     margin: 5px 0;
     text-align: center;
-    /* padding: 0; */
+    font-family: monospace;
 }
 
 /* ability list - second ordered list */
@@ -74,6 +81,7 @@ img {
     text-decoration: underline;
     margin: 0 20px 0 -30px;
     text-align: left;
+    font-family: 'fira sans condensed', sans-serif;
 }
 
 /* .ability-1:hover, .ability-2:hover, .grenade:hover, .ultimate:hover, .passive:hover{
@@ -82,8 +90,9 @@ img {
 
 /* agent headers */
 h3, h4 {
-    font-size: 22px;
-    padding-top: 30px;
+    font-size: 30px;
+    padding-top: 13px;
+    font-family: 'fira sans condensed', sans-serif;
 }
 
 
@@ -91,7 +100,9 @@ h3, h4 {
 .agent-info, .desc {
     font-size: 18px;
     text-align: center, justify;
-    margin: 20px 20px;
+    margin: 16px 20px;
+    font-family: fantasy;
+
 }
 
 .container {
@@ -107,15 +118,15 @@ h3, h4 {
     width: 100%;
     /* height: 150%; */
     text-align: center;
-    /* border: 3px solid thistle; */
+    padding-block-end: 20px;
 }
 
 /* abilities button */
 .button {
     background-color: rgba(105, 178, 131, 255);
     position: absolute;
-    right: 38%;
-    margin: 20px 0px;
+    right: 33.5%;
+    margin: 16px 0px;
     cursor: crosshair;
     border: 5px solid rgba(1,183,147,255);
     width: 5%;
@@ -141,6 +152,7 @@ h3, h4 {
     background-color: rgba(252,227,203,255);
     height: 70%;
     width: 70%;
+    margin: 50px 0px 0px 60px;
 }
 
 .modal {
@@ -205,7 +217,9 @@ h3, h4 {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and 
+/* change max to min? what'll happen? */
+(min-width: 600px) {
     body{
         font-size: 15px;
     }
@@ -221,11 +235,10 @@ h3, h4 {
     }
 
     img {
-        width: 155px;
-        height: 155px;
+        width: 75%;
+        height: 75%;
         float: left;
-        margin-right: 10px;
-        margin-bottom: 60px;
+        padding-top: 20px;
     }
     /* ability name list */
     .ability-1, .ability-2, .grenade, .ultimate, .passive {
@@ -246,23 +259,26 @@ h3, h4 {
     height: 32px;
     }
 
-    agent headers
+    /* agent headers */
     h3, h4 {
-    font-size: 15.5px;
+    font-size: 18px;
     text-align: center;
+    padding: -10px;
     } 
 
     /* agent desc p tag */
     .agent-info, .desc {
-    font-size: 11.5px;
+    font-size: 11px;
     text-align: center;
+    padding: -5px;
     }
 
-    /* .button {
-        background-color: rgb(228, 152, 154, 255);
-        position: absolute;
-        margin: 10px 0 0 0;
-    } */
+    .button {
+        width: 12.5%;
+        height: 10%;
+        right: 30%;
+        margin: 0px 5px;
+    }
 
 
     .modal-body {
