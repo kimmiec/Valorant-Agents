@@ -153,6 +153,10 @@ function specificAgent(id) {
             // ability button
             const abilityBtn = $('#abilityBtn')
             abilityBtn.removeClass('hidden')
+
+            //stupid ass description column that decided to break
+            const desc = $('.card-panel2')
+            desc.removeClass('hidden')
         
         }
 
@@ -189,26 +193,3 @@ closeBtn.on('click', () => {
     console.log('hi')
 });
 
-// listen for close click
-// closeBtn.on('click', (closeModal) => {
-//     modal.style.display = 'none';
-//     console.log('hi')
-// });
-
-// function to open modal
-// function openModal() {
-//     modal.style.display = 'block';
-// }
-
-// function to close modal
-// function closeModal() {
-//     modal.style.display = 'none';
-// }
-
-// create modal pop up clicks
-                    // $li.on('click', () => {
-                    //     $('.modal, .modal-content').addClass('active');
-                    // })
-                    // $('.close, .modal').on('click', () => {
-                    //     $('.modal, .modal-content').removeClass('active');
-                    // })
