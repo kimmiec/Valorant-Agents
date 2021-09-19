@@ -10,7 +10,6 @@ function getAgents() {
             // grab the agent name from the object
             agentData = info.data;
             // console.log(agentData);
-            // console.log(agentData[0].displayName)
 
             const agentList = $('#agent-order')
             //create an empty object
@@ -32,49 +31,27 @@ function getAgents() {
                     //add the agent names to the dictionary
                     agentDictionary[agent.displayName] = '1';
 
-                    //hover over names and the description appears
-                    // $li.addClass('desc')
-
                     // click on the agent names and have it grab their specific info
                     $li.on('click', () => (specificAgent(agent.uuid)))
     
-                    // ======================== grab the agents description =================
+    // ======================== grab the agents description ===========================
                     const $div = $('<div>')
                     $div.html(`${agent.description}`)
-                    // hide description
-                    // $div.addClass('hide')
-                    // display description 
-                    // agentList.append($div)
-                    // console.log(agent.abilities)
-                    // ===================== grab agent abilities/description ==========================
+
+    // ===================== grab agent abilities/description ==========================
                     agent.abilities.forEach((ability) => {
-
-                        //  console.log(ability.slot)
-                        // ^would it be better to have all the slot names appear? or just the passive?
-                        // console.log(ability.displayName)
-                        // console.log(ability.description)
-                        // agentList.append($li)
-                        // const $modal = $('#modal-description')
-                        // $modal.html(agent.abilities)
-
                         
                     })
-                    
 
                 }
-                // console.log(agent.displayName)
+
             });
         }
-        // (error) => {
-        //     console.log('bad request: ', error);
 
-
-        // }
     );
 
 }
 
-// const agentInfo = $('.agent-info')
 // create function to grab one specific agent and their info
 function specificAgent(id) {
     $.ajax({
@@ -174,12 +151,6 @@ let modal = $('#smallModal');
 let abilityBtn = $('#abilityBtn');
 // get close button
 let closeBtn = $('.closeBtn');
-
-// listen for open click
-// abilityBtn.on('click', (openModal) => {
-//     // modal.style.display = 'block'
-//     console.log('hi')
-// });
 
 // another attempt at open click
 abilityBtn.on('click', () => {
