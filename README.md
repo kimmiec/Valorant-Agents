@@ -8,8 +8,25 @@ A web application that provides details on the agents of the game as well as the
 - CSS3
 - JavaScript
 - jQuery
+- Google Fonts
+- Valorant API
 
 ## Screenshots:
 ### Wireframe
 
-![Valorant agents wireframe](./images/Valorant-Agents-Wireframe.png)
+![Valorant agents wireframe](./images/Agents-of-Valorant-Wireframe.png)
+
+### App Display
+
+![Valorant app](./images/agents-of-val-app.png)
+
+### Modal Display
+
+![Valorant Modal](./images/agents-of-val-pop-up.png)
+
+
+## App Link:
+https://valorant-agents-3i4o1br81-kimmiec.vercel.app/
+
+## Future Enhancements:
+Add in more agents once they are released!
