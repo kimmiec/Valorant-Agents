@@ -25,7 +25,6 @@ h1 {
     text-shadow: 0 0 8px rgba(118,119,135,255), 0 0 10px rgba(236,231,225,255);
 }
 
-
 /* agent names - first ordered list */
 .names {
     color: rgba(204,70,89,255);
@@ -89,10 +88,6 @@ img {
     font-size: 18px;
 }
 
-/* .ability-1:hover, .ability-2:hover, .grenade:hover, .ultimate:hover, .passive:hover{
-    color: lightsteelblue;
-} */
-
 /* agent headers */
 h3, h4 {
     font-size: 25px;
@@ -109,7 +104,6 @@ h3, h4 {
     margin: -10px 0 0;
 }
 
-
 /* agent desc p tag */
 .agent-info, .desc {
     font-size: 16px;
@@ -117,24 +111,22 @@ h3, h4 {
     margin: 16px 20px;
     font-family: fantasy;
     color: rgba(177,93,107,255);
-
 }
 
 .container {
     display: flex;
     gap: 10%;
 }
-
+/* div for agent name list */
 #agents {
     width: 10%;
 }
-
+/* display agent info/desc */
 #display {
     width: 100%;
     text-align: center;
     padding-block-end: 20px;
 }
-
 /* abilities button */
 .button {
     background-color: rgba(169,185,202,255);
@@ -143,13 +135,13 @@ h3, h4 {
     margin: 13px 0px;
     cursor: crosshair;
     border: 3px solid rgba(114,132,151,255);
-    width: 5%;
-    height: 5%;
+    /* width: 5%;
+    height: 5%; */
     color: rgba(71,103,201,255);
     font-family: 'fira sans condensed', sans-serif;
     font-size: 17px;
+    /* padding: 200px; */
 }
-
 /* card panels */
 .card-panel {
     width: 70%;
@@ -158,7 +150,6 @@ h3, h4 {
     background-color: rgba(169,175,189,255);
     padding-block-start: 5px;
     padding-block-end: 5px;
-
 }
 /* modal pop up */
 #active {
@@ -167,13 +158,10 @@ h3, h4 {
     width: 70%;
     margin: 50px 0px 0px 60px;
 }
-
 .modal {
     display: none;
     max-height: 100vh;
-
 }
-
 .modal.active {
     display: block;
     position: fixed;
@@ -185,7 +173,6 @@ h3, h4 {
     /* overflow-y: initial; */
     background-color: rgb(37, 150, 190, 0.2);
 }
-
 .modal-content.active {
     background-color: rgba(86,152,185,0.93);
     margin: 20% auto;
@@ -199,31 +186,26 @@ h3, h4 {
     animation: openModal;
     animation-duration: 1.5s;
 }
-
 .modal-body {
     padding: 20px;
     text-align: center;
     overflow-y: auto;
 }
-
 .closeBtn {
     color: rgba(253,205,172,255);
     float: right;
     margin: 0 5px 0 0;
     font-size: 20px;
 }
-
 .closeBtn:hover, .closeBtn:focus {
     color: rgba(226,82,109,255);
     text-decoration: none;
     cursor: crosshair;
 }
-
 @keyframes openModal {
     from{opacity: 0;}
     to{opacity: 1;}
 }
-
 .hidden {
     display: none;
 }
@@ -290,12 +272,15 @@ h3, h4 {
     padding: -5px;
     }
 
-    .button {
+    /* .button {
         width: 12.5%;
         height: 8%;
         right: 26%;
-        margin: 0px 10px;
-    }
+        margin: 5px 20px;
+        min-width: 5%;
+        padding: 10px 10px;
+    } */
+
     /* card panels */
     .card-panel {
         width: 80%;
@@ -348,11 +333,11 @@ h3, h4 {
         padding-block-end: 20px;
     }
     /* abilities button */
-    .button {
+    /* .button {
         width: 10%;
         height: 5%;
         margin-top: -3px;
-    }
+    } */
     /* ability images */
     #iconImg1, #iconImg2, #iconImg3, #iconImg4, #iconImg5 {
         padding-top: 30px;
@@ -369,3 +354,4 @@ h3, h4 {
         margin-top: 23px;
     }
 }
+

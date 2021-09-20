@@ -25,7 +25,11 @@ A web application that provides details on the agents of the game as well as the
 ![Valorant Modal](./images/agents-of-val-pop-up.png)
 
 
-## App Link:
+## Getting Started:
+- Click an agent you want to know about~
+- Click the abilities button to find out what their abilities are!
+
+- App Link: 
 https://valorant-agents-3i4o1br81-kimmiec.vercel.app/
 
 ## Future Enhancements:

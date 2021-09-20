@@ -106,7 +106,6 @@ function specificAgent(id) {
                 console.log(ability.displayIcon)
             })
 
-
             // display ability description in modal
             const desc1 = $('#ability1')
             const desc2 = $('#ability2')
@@ -155,12 +154,11 @@ let closeBtn = $('.closeBtn');
 // another attempt at open click
 abilityBtn.on('click', () => {
     $('.modal, .modal-content').addClass('active');
-    console.log('hi')
+    // console.log('hi')
 });
-
 // close click
 closeBtn.on('click', () => {
     $('.modal, .modal-content').removeClass('active');
-    console.log('hi')
+    // console.log('hi')
 });
 
