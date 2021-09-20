@@ -30,7 +30,7 @@ A web application that provides details on the agents of the game as well as the
 - Click the abilities button to find out what their abilities are!
 
 - App Link: 
-https://valorant-agents-3i4o1br81-kimmiec.vercel.app/
+https://valorant-agents.vercel.app/
 
 ## Future Enhancements:
 Add in more agents once they are released!
