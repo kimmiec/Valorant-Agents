@@ -211,7 +211,6 @@ h3, h4 {
 }
 
 @media only screen and 
-/* change max to min? what'll happen? */
 (max-width: 600px) {
     body{
         font-size: 15px;
